@@ -4,3 +4,11 @@ venv/
 .env
 *.xlsx
 *.xls
+
+# 脱敏样例数据允许入库（由 tools/generate_sample_data.py 生成，不含真实敏感数据）
+!samples/
+!samples/*.xlsx
+!samples/*.csv
+
+# 临时调试 / 数据校验脚本（不入库）
+tools/_*.py
