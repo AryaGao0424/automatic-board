@@ -1,6 +1,6 @@
 ﻿# 📊 财务共享中心 · 应付组退单分析看板
 
-> **面试项目资产包总入口** — 一个由实习生独立主导、从 0 到 1 完成并持续迭代 4 个版本、被部门采纳为月度 SOP 管理工具的「退单分析自动化看板」。
+> **概要** — 一个由实习生独立主导、从 0 到 1 完成并持续迭代 4 个版本、被部门采纳为月度 SOP 管理工具的「退单分析自动化看板」。
 
 ---
 
@@ -24,6 +24,11 @@
 | BIP 攻坚追踪 | 系统优化需求台账的 KPI、分类、状态筛选与高亮 | 从"发现问题"到"闭环解决" |
 | 底部明细表 | 全量字段预览 + 状态高亮 + 行数滑块 | 数据可回溯可核对 |
 
+<img width="1458" height="1119" alt="image" src="https://github.com/user-attachments/assets/25b619db-5f88-4f72-902d-541dcd1d4692" />
+<img width="1443" height="905" alt="image" src="https://github.com/user-attachments/assets/cbbfab94-58b4-4b2f-96d8-3fe0ba90f952" />
+<img width="1433" height="1114" alt="image" src="https://github.com/user-attachments/assets/bff71d3c-3e68-4fde-a3af-ce7025f89094" />
+<img width="1428" height="966" alt="image" src="https://github.com/user-attachments/assets/99bfd7d6-1db4-46ee-a92c-78e7ce8d2017" />
+
 ---
 
 ## 🏗️ 技术架构（一句话版）
@@ -35,19 +40,6 @@ BIP系统导出Excel ──▶ 数据接入层(load_and_merge) ──▶ 指标�
 ```
 
 **架构核心设计**：数据与展示分离。所有图表只认标准格式的 DataFrame，替换数据源只需改一行代码，因此可低成本复用到费用组、资产组等其他业务线。
-
----
-
-## 📈 核心业务数据（2026 年 1-6 月）
-
-| 指标 | 数值 | 口径说明 |
-|---|---|---|
-| 作业明细记录 | 8,009 条 | 主表全量 |
-| 唯一单据数（退单率分母） | 7,522 笔 | 按单据编号去重 |
-| 曾被退回单据数（分子） | 465 笔 | 口径②：驳出共享次数 ≥ 1 |
-| 整体退单率 | **6.2%** | 465 / 7522 |
-| 管理红线 | 15% | 超过即触发重点关注 |
-| 数据时段 | 2026年1月 - 6月 | BIP 系统导出 |
 
 ---
 
@@ -67,9 +59,9 @@ pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 python -m streamlit run fssc_dashboard.py
 
 # 3. 浏览器自动打开，在左侧边栏上传 3 个数据文件即可
-#    ① 主表：1-6月应付组作业明细查询列表.xlsx
-#    ② 金额表：1-6月应付组作业明细查询-金额.xlsx
-#    ③ BIP 系统优化台账：BIP应付组系统优化点_分类汇总.xlsx（可选）
+#    ① 主表：样例_主表_作业明细查询列表.xlsx
+#    ② 金额表：样例_金额表_作业明细查询-金额.xlsx
+#    ③ BIP 系统优化台账：样例_BIP系统优化点_分类汇总.xlsx（可选）
 ```
 
 > 💡 一键启动方式：参照 `..\看板共享资料包\` 中的 `02-1初始化环境.bat` 与 `02-2启动看板.bat`。
@@ -89,7 +81,7 @@ automatic board/
 ├── requirements.txt               # 依赖清单
 ├── README.md                      # 👈 本文档（项目总入口）
 ├── CHANGELOG.md                   # 版本迭代日志
-├── docs/                          # 👈 面试项目资产文档（7 份）
+├── docs/                          # 👈 项目资产文档（7 份）
 │   ├── 01-项目背景与业务痛点.md
 │   ├── 02-技术架构设计.md
 │   ├── 03-核心算法与统计口径.md
@@ -97,9 +89,8 @@ automatic board/
 │   ├── 05-业务价值与落地路线.md
 │   ├── 06-面试讲稿与高频Q&A.md
 │   └── 07-代码导读与工程实践.md
-├── tools/                         # 辅助脚本（样例数据生成等）
 ├── samples/                       # 脱敏样例数据
-└── .xlsx/                         # 真实业务数据（⚠️ 注意脱敏，勿公开）
+└── tools/                         # 辅助脚本（样例数据生成等）
 ```
 
 ---
