@@ -25,8 +25,8 @@
 | 底部明细表 | 全量字段预览 + 状态高亮 + 行数滑块 | 数据可回溯可核对 |
 
 <img width="1458" height="1119" alt="image" src="https://github.com/user-attachments/assets/25b619db-5f88-4f72-902d-541dcd1d4692" />
-<img width="1443" height="905" alt="image" src="https://github.com/user-attachments/assets/cbbfab94-58b4-4b2f-96d8-3fe0ba90f952" />
 <img width="1432" height="476" alt="image" src="https://github.com/user-attachments/assets/6b09815a-12ea-48d8-b341-e89e684aad70" />
+<img width="1443" height="905" alt="image" src="https://github.com/user-attachments/assets/cbbfab94-58b4-4b2f-96d8-3fe0ba90f952" />
 <img width="1430" height="1044" alt="image" src="https://github.com/user-attachments/assets/5c447451-15ea-40df-ae74-c0a87f669701" />
 <img width="1433" height="1114" alt="image" src="https://github.com/user-attachments/assets/bff71d3c-3e68-4fde-a3af-ce7025f89094" />
 <img width="1428" height="966" alt="image" src="https://github.com/user-attachments/assets/99bfd7d6-1db4-46ee-a92c-78e7ce8d2017" />
